@@ -106,11 +106,19 @@ const Dashboard = () => {
 
   return (
     <DashboardStyle>
-      <Header text="Dashboard" onClick={() => navigate("/")} />
+      <Header
+        text="Dashboard"
+        onClick={() => navigate("/")}
+        data-testid="header"
+      />
       <TableContainer>
         <TableHeader>
-          <p>User list</p>
-          <Button type="primary" onClick={() => navigate("/form/create")}>
+          <p data-testid="user-list">User list</p>
+          <Button
+            type="primary"
+            onClick={() => navigate("/form/create")}
+            data-testid="add-new"
+          >
             Add new
           </Button>{" "}
         </TableHeader>
@@ -119,6 +127,7 @@ const Dashboard = () => {
           dataSource={userData}
           loading={loading}
           setSortedInfo={setSortedInfo}
+          data-testid="table"
         />
       </TableContainer>
     </DashboardStyle>
