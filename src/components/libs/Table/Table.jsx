@@ -12,7 +12,7 @@ const Table = ({ columns, dataSource, loading, setSortedInfo }) => {
       dataSource={dataSource}
       loading={loading}
       onChange={handleChange}
-      scroll={{ x: "100vw" }}
+      scroll={{ x: "90vw" }}
     />
   );
 };
